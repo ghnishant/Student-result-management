@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Result Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Student Result Management</h1>
+    <form id="studentForm">
+      <input type="text" id="studentName" placeholder="Student Name" required />
+      <div id="subjectsContainer"></div>
+      <button type="button" id="addSubjectBtn">➕ Add Subject</button>
+      <button type="submit">Result</button>
+      <button type="button" id="clearBtn">🧹 Clear All</button>
+    </form>
+
+    <table id="resultTable">
+      <thead>
+        <tr id="tableHead">
+          <th>Student Name</th>
+          <!-- Subject headers will be inserted dynamically -->
+          <th>Total</th>
+          <th>Percentage</th>
+          <th>Status</th>
+          <th>Remarks</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="resultBody"></tbody>
+    </table>
+    <button id="downloadPDF">📄 Download PDF</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
